@@ -16,10 +16,14 @@ $nav-link-active-bg: #22313F;
 $nav-active-color: #fff;
 $nav-link-alt-bg: #4ECDC4;
 $body-bg: #1BA39C;
+$content-example-bg: rgba(0,0,0,0.7);
+$content-example-color: #fff;
+$link-color: #22A7F0;
+$link-hover-color: #6BB9F0;
 
 $nav-height: 50px;
 $nav-med-height: 75px;
-$nav-mobi-height: 90px;
+$nav-mobi-height: 75px;
 
 $bio-size: 300px;
 
@@ -27,7 +31,9 @@ $content-padding-size: 0;
 $content-padding: 0 $content-padding-size;
 $content-font-size: 16pt;
 $content-med-font-size: 12pt;
-$content-mobi-font-size: 10pt;
+$content-mobi-font-size: 14pt;
+$content-mobi-margin-top: 30px;
+$content-example-size: 200px;
 
 @mixin x-user-select ($value: none) {
 	-webkit-user-select: $value;
@@ -84,6 +90,17 @@ $content-mobi-font-size: 10pt;
   filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius="" . $blur);
 }
 
+@mixin gradientbg($r,$g,$b) {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+80,7db9e8+100,000000+100&amp;1+0,0.5+80,0+100 */
+	background: -moz-linear-gradient(top,  rgba($r,$g,$b,1) 0%, rgba($r,$g,$b,0.5) 80%, rgba($r,$g,$b,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba($r,$g,$b,1)), color-stop(80%,rgba($r,$g,$b,0.5)), color-stop(100%,rgba($r,$g,$b,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba($r,$g,$b,1) 0%,rgba($r,$g,$b,0.5) 80%,rgba($r,$g,$b,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba($r,$g,$b,1) 0%,rgba($r,$g,$b,0.5) 80%,rgba($r,$g,$b,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba($r,$g,$b,1) 0%,rgba($r,$g,$b,0.5) 80%,rgba($r,$g,$b,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba($r,$g,$b,1) 0%,rgba($r,$g,$b,0.5) 80%,rgba($r,$g,$b,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
 body {
   font-family: $font-raleway;
   background-color: $body-bg;
@@ -94,24 +111,25 @@ body {
   @include scrollbars(0.5em, $body-bg);
 }
 
+a {
+	color: $link-color;
+	text-decoration: none;
+	font-weight: 700;
+
+	&:hover {
+		color: $link-hover-color;
+	}
+}
+
 .bg {
 	background-repeat:no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
+	z-index: -1;
 
 	&.blur {
 		@include filter(blur(20px) brightness(150%));
 	}
-}
-
-.spacer {
-	height: $nav-height;
-	width: inherit;
-}
-
-.large-spacer {
-	height: 400px;
-	width: inherit;
 }
 
 .ocean-bg {
@@ -185,20 +203,31 @@ body {
   .screen {
     display:block;
     position:absolute;
-    top:$nav-height + 10px;;
-		visibility: hidden;
+		top:0;
+		// visibility: hidden;
+		display: none;
 		width:100%;
 		height: inherit;
 		padding: $content-padding;
     overflow-y: auto;
 
     &.active {
-			visibility: visible;
+			// visibility: visible;
+			display:inline-block;
     }
+
+		&::before {
+			content: "";
+			display:block;
+			height:$nav-height + 25px !important;
+		}
 
 		h1 {
 			font-weight: 100;
-			text-align: left;
+			// margin-top: 0;
+			// margin-left: 25px;
+			// font-size:24pt;
+			margin: 0 0 50px 25px;
 		}
 
 		.article {
@@ -311,6 +340,50 @@ body {
         }
       }
     }
+
+		.examples-container {
+			width: inherit;
+			display:flex;
+			flex-flow: row wrap;
+			justify-content: space-around;
+			align-items: flex-start;
+			align-content: flex-start;
+
+			.example {
+				width: $content-example-size;
+				height: $content-example-size;
+				order: 1;
+				overflow: hidden;
+				margin: 10px;
+
+				img {
+					width: $content-example-size;
+					height: $content-example-size;
+				}
+
+				p.description {
+					$ex-padding: 5px;
+					width: $content-example-size - (2 * $ex-padding);
+					height: $content-example-size - (2 * $ex-padding);
+					position:relative;
+					top: -(2 * $content-example-size);
+					left: 0;
+					padding: $ex-padding;
+					margin: 0;
+					background-color: $content-example-bg;
+					color: $content-example-color;
+					@include gradientbg(0, 0, 0);
+					@include transition($default-transition);
+				}
+
+				&:hover {
+					p.description {
+						top: -4 - $content-example-size;
+						left: 0px;
+					}
+				}
+			}
+		}
   }
 }
 // End Main Site
@@ -330,14 +403,16 @@ body {
 		width:80%;
 
 		.screen {
-			top: $nav-med-height + 10px;
+			&::before {
+				height: $nav-med-height + 25px !important;
+			}
+
+			h1 {
+				font-size: 20pt;
+			}
 
 			.article {
-				font-size: 14pt;
-
-				h1 {
-					font-size: 20pt;
-				}
+				font-size: $content-med-font-size;
 
 				div.third-container {
 
@@ -346,8 +421,28 @@ body {
 						ul.details {
 
 							.info {
-								line-height: 14pt;
+								line-height: $content-med-font-size;
 							}
+						}
+					}
+				}
+			}
+
+			.examples-container {
+				.example {
+					width: $content-example-size * 2;
+
+					p.description {
+						top: -4 - $content-example-size;
+						left: $content-example-size;
+						background: rgba(0,0,0,0.5);
+						@include transition(none);
+					}
+
+					&:hover {
+						p.description {
+							top: -4 - $content-example-size;
+							left: $content-example-size;
 						}
 					}
 				}
@@ -363,6 +458,13 @@ body {
 		display:none;
 	}
 
+
+	#nav {
+		ul.links {
+			height: $nav-mobi-height;
+		}
+	}
+
 	#content {
 		left: 0;
 		width: 100%;
@@ -372,11 +474,23 @@ body {
 		}
 
 		.screen {
-			top: $nav-mobi-height + 10px;
+			top: 0;
 			padding:0;
 
+			&::before {
+				height: $nav-mobi-height + 25px !important;
+			}
+
+			h1 {
+				font-size: 16pt;
+			}
+
+			.article + .article {
+				margin-top: $content-mobi-margin-top;
+			}
+
 			.article {
-				font-size: 10pt;
+				font-size: $content-mobi-font-size;
 				text-align: center;
 
 				&.splash {
@@ -392,6 +506,10 @@ body {
 						margin-top: 0;
 					}
 
+					div.third + div.third {
+						margin-top: $content-mobi-margin-top;
+					}
+
 					div.third {
 						width: 96%;
 						height: auto;
@@ -400,15 +518,29 @@ body {
 
 						ul.details {
 							.info {
-								line-height: 10pt;
+								line-height: $content-mobi-font-size;
 							}
 						}
 					}
 				}
 			}
 
-			.spacer {
-				display: none;
+			.examples-container {
+
+				.example {
+					width: $content-example-size;
+					height: $content-example-size * 2;
+
+					p.description {
+						top:0;
+						left:0;
+					}
+
+					&:hover p.description {
+						top:0;
+						left:0;
+					}
+				}
 			}
 		}
 	}
