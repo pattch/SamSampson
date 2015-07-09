@@ -18,6 +18,7 @@ $nav-link-alt-bg: #4ECDC4;
 $body-bg: #1BA39C;
 $content-example-bg: rgba(0,0,0,0.7);
 $content-example-color: #fff;
+$link-dark-color: #22313F;
 $link-color: #22A7F0;
 $link-hover-color: #6BB9F0;
 
@@ -70,26 +71,6 @@ $content-example-size: 200px;
   background-clip: padding-box;  /* stops bg color from leaking outside the border: */
 }
 
-@mixin frame-zoom($scale) {
-  -ms-zoom: $scale;
-  -moz-transform: scale($scale);
-  -moz-transform-origin: 0 0;
-  -o-transform: scale($scale);
-  -o-transform-origin: 0 0;
-  -webkit-transform: scale($scale);
-  -webkit-transform-origin: 0 0;
-}
-
-@mixin blur($blur) {
-  -webkit-filter: blur($blur);
-  -moz-filter: blur($blur);
-  -ms-filter: blur($blur);
-  -o-filter: blur($blur);
-  -ms-filter: blur($blur);
-  filter: blur($blur);
-  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius="" . $blur);
-}
-
 @mixin gradientbg($r,$g,$b) {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+80,7db9e8+100,000000+100&amp;1+0,0.5+80,0+100 */
 	background: -moz-linear-gradient(top,  rgba($r,$g,$b,1) 0%, rgba($r,$g,$b,0.5) 80%, rgba($r,$g,$b,0) 100%); /* FF3.6+ */
@@ -140,6 +121,11 @@ a {
 	height:160%;
 	@extend .bg;
 	background-image: url(../images/IMG_0107.JPG);
+
+	&.blur {
+		@include filter(blur(10px));
+		background-image: url(../images/IMG_0107_blur.JPG);
+	}
 }
 
 // Main Site
@@ -310,55 +296,29 @@ a {
 			}
 		}
 
-    .demo {
-      display:block;
-      position:relative;
-      width: 100%;
-      margin: 0 auto 100px auto;
-
-      p.description {
-        display:inline;
-        float:right;
-      }
-
-      span.codepen {
-        display:inline-block;
-        width:300px;
-        height:200px;
-        overflow:hidden;
-
-        div {
-            width:600px;
-            height:200px;
-            overflow:hidden;
-
-            iframe {
-              @include frame-zoom(0.5);
-              width: 300px;
-              overflow:auto;
-            }
-        }
-      }
-    }
-
 		.examples-container {
 			width: inherit;
-			display:flex;
-			flex-flow: row wrap;
-			justify-content: space-around;
-			align-items: flex-start;
-			align-content: flex-start;
+			@include display-flex;
+			@include flex-flow(row wrap);
+			@include justify-content(space-around);
+			@include align-items(flex-start);
+			@include align-content(flex-start);
+			// flex-flow: row wrap;
+			// justify-content: space-around;
+			// align-items: flex-start;
+			// align-content: flex-start;
 
 			.example {
 				width: $content-example-size;
 				height: $content-example-size;
-				order: 1;
+				@include order(1);
 				overflow: hidden;
 				margin: 10px;
 
 				img {
 					width: $content-example-size;
 					height: $content-example-size;
+					@include border-radius(15px);
 				}
 
 				p.description {
@@ -368,6 +328,7 @@ a {
 					position:relative;
 					top: -(2 * $content-example-size);
 					left: 0;
+					@include border-radius(15px);
 					padding: $ex-padding;
 					margin: 0;
 					background-color: $content-example-bg;
@@ -385,6 +346,38 @@ a {
 			}
 		}
   }
+}
+
+#fa-links {
+	position:absolute;
+	top: $nav-height;
+	left: 0px;
+	width: 100%;
+	z-index: -1;
+
+	div {
+		width: 20%;
+		text-align: center;
+		display:block;
+
+		&.fa-left {
+			float:left;
+		}
+
+		&.fa-right {
+			float: right;
+		}
+
+		.fa {
+			color: white;
+			display:block;
+			margin: 30px 0;
+
+			&:hover {
+				color: black;
+			}
+		}
+	}
 }
 // End Main Site
 
@@ -435,8 +428,18 @@ a {
 					p.description {
 						top: -4 - $content-example-size;
 						left: $content-example-size;
-						background: rgba(0,0,0,0.5);
+						// background: rgba(0,0,0,0.5);
+						background: none;
+						color: black;
 						@include transition(none);
+
+						a {
+							color: $link-dark-color;
+
+							&:hover {
+								color: $link-hover-color;
+							}
+						}
 					}
 
 					&:hover {
@@ -449,6 +452,25 @@ a {
 			}
 		}
 	}
+
+	#fa-links {
+		top: $nav-med-height;
+		width: 20%;
+		left: auto;
+		right: 0px;
+
+		div {
+			width: auto;
+
+			&.fa-left {
+				float:none;
+			}
+
+			&.fa-right {
+				float: none;
+			}
+		}
+	}
 }
 // End Medium Site
 
@@ -457,7 +479,6 @@ a {
 	.bg {
 		display:none;
 	}
-
 
 	#nav {
 		ul.links {
@@ -543,6 +564,10 @@ a {
 				}
 			}
 		}
+	}
+
+	#fa-links {
+		display: none;
 	}
 }
 // End Mobile Site
