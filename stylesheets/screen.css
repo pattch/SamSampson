@@ -262,30 +262,30 @@ a:hover {
   -webkit-align-content: flex-start;
   align-content: flex-start;
 }
-/* line 311, ../sass/screen.scss */
+/* line 307, ../sass/screen.scss */
 #content .screen .examples-container .example {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   -webkit-order: 1;
   order: 1;
   overflow: hidden;
   margin: 10px;
 }
-/* line 318, ../sass/screen.scss */
+/* line 314, ../sass/screen.scss */
 #content .screen .examples-container .example img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   -webkit-border-radius: 15px;
   border-radius: 15px;
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */
 }
-/* line 324, ../sass/screen.scss */
+/* line 320, ../sass/screen.scss */
 #content .screen .examples-container .example p.description {
-  width: 190px;
-  height: 190px;
+  width: 240px;
+  height: 240px;
   position: relative;
-  top: -400px;
+  top: -500px;
   left: 0;
   -webkit-border-radius: 15px;
   border-radius: 15px;
@@ -315,13 +315,13 @@ a:hover {
   -webkit-transition: background-color 0.2s, color 0.2s, top 0.2s, left 0.2s, right 0.2s, bottom 0.2s;
   transition: background-color 0.2s, color 0.2s, top 0.2s, left 0.2s, right 0.2s, bottom 0.2s;
 }
-/* line 341, ../sass/screen.scss */
+/* line 337, ../sass/screen.scss */
 #content .screen .examples-container .example:hover p.description {
-  top: -204px;
+  top: -254px;
   left: 0px;
 }
 
-/* line 351, ../sass/screen.scss */
+/* line 347, ../sass/screen.scss */
 #fa-links {
   position: absolute;
   top: 50px;
@@ -329,68 +329,72 @@ a:hover {
   width: 100%;
   z-index: -1;
 }
-/* line 358, ../sass/screen.scss */
+/* line 354, ../sass/screen.scss */
 #fa-links div {
   width: 20%;
   text-align: center;
   display: block;
 }
-/* line 363, ../sass/screen.scss */
+/* line 359, ../sass/screen.scss */
 #fa-links div.fa-left {
   float: left;
 }
-/* line 367, ../sass/screen.scss */
+/* line 363, ../sass/screen.scss */
 #fa-links div.fa-right {
   float: right;
 }
-/* line 371, ../sass/screen.scss */
+/* line 367, ../sass/screen.scss */
 #fa-links div .fa {
   color: white;
   display: block;
   margin: 30px 0;
+  -moz-transition: background-color 0.2s, color 0.2s, top 0.2s, left 0.2s, right 0.2s, bottom 0.2s;
+  -o-transition: background-color 0.2s, color 0.2s, top 0.2s, left 0.2s, right 0.2s, bottom 0.2s;
+  -webkit-transition: background-color 0.2s, color 0.2s, top 0.2s, left 0.2s, right 0.2s, bottom 0.2s;
+  transition: background-color 0.2s, color 0.2s, top 0.2s, left 0.2s, right 0.2s, bottom 0.2s;
 }
-/* line 376, ../sass/screen.scss */
+/* line 373, ../sass/screen.scss */
 #fa-links div .fa:hover {
   color: black;
 }
 
 @media (max-width: 1200px) {
-  /* line 387, ../sass/screen.scss */
+  /* line 384, ../sass/screen.scss */
   #nav ul.links {
     width: 100%;
     height: 75px;
     font-size: 20px;
   }
 
-  /* line 394, ../sass/screen.scss */
+  /* line 391, ../sass/screen.scss */
   #content {
     left: 0;
     width: 80%;
   }
-  /* line 399, ../sass/screen.scss */
+  /* line 396, ../sass/screen.scss */
   #content .screen::before {
     height: 100px !important;
   }
-  /* line 403, ../sass/screen.scss */
+  /* line 400, ../sass/screen.scss */
   #content .screen h1 {
     font-size: 20pt;
   }
-  /* line 407, ../sass/screen.scss */
+  /* line 404, ../sass/screen.scss */
   #content .screen .article {
     font-size: 12pt;
   }
-  /* line 416, ../sass/screen.scss */
+  /* line 413, ../sass/screen.scss */
   #content .screen .article div.third-container div.third ul.details .info {
     line-height: 12pt;
   }
-  /* line 425, ../sass/screen.scss */
+  /* line 422, ../sass/screen.scss */
   #content .screen .examples-container .example {
-    width: 400px;
+    width: 500px;
   }
-  /* line 428, ../sass/screen.scss */
+  /* line 425, ../sass/screen.scss */
   #content .screen .examples-container .example p.description {
-    top: -204px;
-    left: 200px;
+    top: -254px;
+    left: 250px;
     background: none;
     color: black;
     -moz-transition: none;
@@ -398,126 +402,126 @@ a:hover {
     -webkit-transition: none;
     transition: none;
   }
-  /* line 436, ../sass/screen.scss */
+  /* line 433, ../sass/screen.scss */
   #content .screen .examples-container .example p.description a {
     color: #22313F;
   }
-  /* line 439, ../sass/screen.scss */
+  /* line 436, ../sass/screen.scss */
   #content .screen .examples-container .example p.description a:hover {
     color: #6BB9F0;
   }
-  /* line 446, ../sass/screen.scss */
+  /* line 443, ../sass/screen.scss */
   #content .screen .examples-container .example:hover p.description {
-    top: -204px;
-    left: 200px;
+    top: -254px;
+    left: 250px;
   }
 
-  /* line 456, ../sass/screen.scss */
+  /* line 453, ../sass/screen.scss */
   #fa-links {
     top: 75px;
     width: 20%;
     left: auto;
     right: 0px;
   }
-  /* line 462, ../sass/screen.scss */
+  /* line 459, ../sass/screen.scss */
   #fa-links div {
     width: auto;
   }
-  /* line 465, ../sass/screen.scss */
+  /* line 462, ../sass/screen.scss */
   #fa-links div.fa-left {
     float: none;
   }
-  /* line 469, ../sass/screen.scss */
+  /* line 466, ../sass/screen.scss */
   #fa-links div.fa-right {
     float: none;
   }
 }
 @media (max-width: 700px) {
-  /* line 479, ../sass/screen.scss */
+  /* line 476, ../sass/screen.scss */
   .bg, .ocean-bg, #content .screen .article .home-bg {
     display: none;
   }
 
-  /* line 484, ../sass/screen.scss */
+  /* line 481, ../sass/screen.scss */
   #nav ul.links {
     height: 75px;
   }
 
-  /* line 489, ../sass/screen.scss */
+  /* line 486, ../sass/screen.scss */
   #content {
     left: 0;
     width: 100%;
   }
-  /* line 493, ../sass/screen.scss */
+  /* line 490, ../sass/screen.scss */
   #content .bg, #content .ocean-bg, #content .screen .article .home-bg {
     display: inline-block;
   }
-  /* line 497, ../sass/screen.scss */
+  /* line 494, ../sass/screen.scss */
   #content .screen {
     top: 0;
     padding: 0;
   }
-  /* line 501, ../sass/screen.scss */
+  /* line 498, ../sass/screen.scss */
   #content .screen::before {
     height: 100px !important;
   }
-  /* line 505, ../sass/screen.scss */
+  /* line 502, ../sass/screen.scss */
   #content .screen h1 {
     font-size: 16pt;
   }
-  /* line 509, ../sass/screen.scss */
+  /* line 506, ../sass/screen.scss */
   #content .screen .article + .article {
     margin-top: 30px;
   }
-  /* line 513, ../sass/screen.scss */
+  /* line 510, ../sass/screen.scss */
   #content .screen .article {
     font-size: 14pt;
     text-align: center;
   }
-  /* line 517, ../sass/screen.scss */
+  /* line 514, ../sass/screen.scss */
   #content .screen .article.splash {
     display: none;
   }
-  /* line 521, ../sass/screen.scss */
+  /* line 518, ../sass/screen.scss */
   #content .screen .article h1 {
     font-size: 16pt;
   }
-  /* line 526, ../sass/screen.scss */
+  /* line 523, ../sass/screen.scss */
   #content .screen .article div.third-container .head {
     margin-top: 0;
   }
-  /* line 530, ../sass/screen.scss */
+  /* line 527, ../sass/screen.scss */
   #content .screen .article div.third-container div.third + div.third {
     margin-top: 30px;
   }
-  /* line 534, ../sass/screen.scss */
+  /* line 531, ../sass/screen.scss */
   #content .screen .article div.third-container div.third {
     width: 96%;
     height: auto;
     left: auto;
     padding: 0 2%;
   }
-  /* line 541, ../sass/screen.scss */
+  /* line 538, ../sass/screen.scss */
   #content .screen .article div.third-container div.third ul.details .info {
     line-height: 14pt;
   }
-  /* line 551, ../sass/screen.scss */
+  /* line 548, ../sass/screen.scss */
   #content .screen .examples-container .example {
-    width: 200px;
-    height: 400px;
+    width: 250px;
+    height: 500px;
   }
-  /* line 555, ../sass/screen.scss */
+  /* line 552, ../sass/screen.scss */
   #content .screen .examples-container .example p.description {
     top: 0;
     left: 0;
   }
-  /* line 560, ../sass/screen.scss */
+  /* line 557, ../sass/screen.scss */
   #content .screen .examples-container .example:hover p.description {
     top: 0;
     left: 0;
   }
 
-  /* line 569, ../sass/screen.scss */
+  /* line 566, ../sass/screen.scss */
   #fa-links {
     display: none;
   }

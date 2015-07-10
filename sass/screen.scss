@@ -34,7 +34,7 @@ $content-font-size: 16pt;
 $content-med-font-size: 12pt;
 $content-mobi-font-size: 14pt;
 $content-mobi-margin-top: 30px;
-$content-example-size: 200px;
+$content-example-size: 250px;
 
 @mixin x-user-select ($value: none) {
 	-webkit-user-select: $value;
@@ -303,10 +303,6 @@ a {
 			@include justify-content(space-around);
 			@include align-items(flex-start);
 			@include align-content(flex-start);
-			// flex-flow: row wrap;
-			// justify-content: space-around;
-			// align-items: flex-start;
-			// align-content: flex-start;
 
 			.example {
 				width: $content-example-size;
@@ -372,6 +368,7 @@ a {
 			color: white;
 			display:block;
 			margin: 30px 0;
+			@include transition($default-transition);
 
 			&:hover {
 				color: black;
