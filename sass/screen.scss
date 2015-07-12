@@ -8,7 +8,7 @@
 
 $font-raleway: 'Raleway', sans-serif;
 $default-transition: background-color 0.2s, color 0.2s, top 0.2s, left 0.2s, right 0.2s, bottom 0.2s;
-$content-transition: all 0.8s ease-in-out;
+$content-transition: all 0.5s ease-in-out;
 
 $nav-bg: #336E7B;
 $nav-link-hover-bg: #A2DED0;
@@ -19,8 +19,8 @@ $body-bg: #1BA39C;
 $content-example-bg: rgba(0,0,0,0.7);
 $content-example-color: #fff;
 $link-dark-color: #22313F;
-$link-color: #22A7F0;
-$link-hover-color: #6BB9F0;
+$link-color: #3A539B;
+$link-hover-color: #81CFE0;
 
 $nav-height: 50px;
 $nav-med-height: 75px;
@@ -66,8 +66,11 @@ $content-example-size: 250px;
 }
 
 @mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
   border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
   background-clip: padding-box;  /* stops bg color from leaking outside the border: */
 }
 
@@ -208,11 +211,11 @@ a {
 			height:$nav-height + 25px !important;
 		}
 
-		h1 {
+		h1, h2, h3 {
 			font-weight: 100;
-			// margin-top: 0;
-			// margin-left: 25px;
-			// font-size:24pt;
+		}
+
+		h1 {
 			margin: 0 0 50px 25px;
 		}
 
@@ -239,7 +242,7 @@ a {
 
 			hr {
 				border:none;
-				border-bottom: 1px solid #fff;
+				border-bottom: 1px solid rgba(0,0,0,0.5);
 			}
 
 			div.third-container {
@@ -265,7 +268,6 @@ a {
 						width: 100%;
 						max-width:300px;
 						@include border-radius(50%);
-						@include filter(grayscale(100%) brightness(90%));
 					}
 
 					ul.details {
@@ -305,39 +307,171 @@ a {
 			@include align-content(flex-start);
 
 			.example {
-				width: $content-example-size;
-				height: $content-example-size;
-				@include order(1);
-				overflow: hidden;
-				margin: 10px;
+				h3 {
+					border: none;
+				}
 
-				img {
+				.thumb {
 					width: $content-example-size;
 					height: $content-example-size;
-					@include border-radius(15px);
-				}
+					@include order(1);
+					overflow: hidden;
+					margin: 10px;
 
-				p.description {
-					$ex-padding: 5px;
-					width: $content-example-size - (2 * $ex-padding);
-					height: $content-example-size - (2 * $ex-padding);
-					position:relative;
-					top: -(2 * $content-example-size);
-					left: 0;
-					@include border-radius(15px);
-					padding: $ex-padding;
-					margin: 0;
-					background-color: $content-example-bg;
-					color: $content-example-color;
-					@include gradientbg(0, 0, 0);
-					@include transition($default-transition);
-				}
-
-				&:hover {
-					p.description {
-						top: -4 - $content-example-size;
-						left: 0px;
+					img {
+						width: $content-example-size;
+						height: $content-example-size;
+						@include border-radius(15px);
 					}
+
+					p.description {
+						$ex-padding: 5px;
+						width: $content-example-size - (2 * $ex-padding);
+						height: $content-example-size - (2 * $ex-padding);
+						display: inline-block;
+						position:relative;
+						top: -(2 * $content-example-size);
+						left: 0;
+						@include border-radius(15px);
+						padding: $ex-padding;
+						margin: 0;
+						background-color: $content-example-bg;
+						color: $content-example-color;
+						@include gradientbg(0, 0, 0);
+						@include transition($default-transition);
+					}
+
+					&:hover {
+						p.description {
+							top: -4 - $content-example-size;
+							left: 0px;
+						}
+					}
+				}
+			}
+
+			$logo-left: 30%;
+			h2 {
+				margin-left: $logo-left;
+				width: inherit;
+				@include order(-1);
+			}
+
+			p.app.description {
+				// @include align-self()
+				width: 100% - $logo-left - 1%;
+				min-height: 250px;
+				padding: 0 1% 0 0;
+				margin: 0;
+				display: inline;
+			}
+
+			.slide {
+				@include order(100);
+				width: 180px;
+				margin: 30px 25px;
+				@include border-radius(15px);
+
+				&.port {
+					width: 300px;
+				}
+			}
+
+			a.logo {
+				width: $logo-left;
+				text-align: center;
+				@include transition($content-transition);
+
+				$logo_top: -50px;
+				img.logo {
+					position:relative;
+					top: $logo_top;
+					width: 75%;
+					height: 75%;
+					margin-top: 0;
+					max-height: 250px;
+					max-width: 250px;
+					@include transition($content-transition);
+
+					&:hover {
+						margin-top: -5%;
+						width: 85%;
+						height: 85%;
+					}
+				}
+
+				.animator {
+					$doctord_width: 88px;
+					$doctord_height: 136px;
+					$doctord_step: 8px;
+					$anim_time: 1s;
+					display:inline;
+
+					position:absolute;
+					// width:$doctord_width + (2 * $doctord_step);
+					height: $doctord_height + (2 * $doctord_step);
+					width: $logo-left;
+					left: 0;
+					margin: 0;
+
+					img.doctord {
+						position:absolute;
+						left:25%;
+						width: 50%;
+						height: auto;
+
+						&:hover {
+							width: 50%;
+							height: auto;
+						}
+
+						&.one {
+							top: $logo_top + $doctord_step * 2;
+							@include animation(ddone $anim_time linear 0s infinite);
+						}
+
+						&.two {
+							top: $logo_top + $doctord_step;
+							@include animation(ddtwo $anim_time linear 0s infinite);
+						}
+
+						&.three {
+							top: $logo_top + 0;
+							@include animation(ddthree $anim_time linear 0s infinite);
+						}
+					}
+				}
+			}
+
+			h3 {
+				width: inherit;
+				border-bottom: 1px solid rgba(0,0,0,0.5);
+				text-align: center;
+			}
+
+			div.link {
+				height: 50px;
+				margin: 15px 0;
+				text-align: center;
+				font-size: 20px;
+				color: white;
+
+				a {
+					width: 250px;
+					padding: 10px 20px;
+					@include border-radius(25px);
+					opacity: 0.5;
+					color: black;
+					border: 1px solid black;
+					@include transition($content-transition);
+
+					&:hover {
+						opacity: 1;
+					}
+				}
+
+				.fa {
+					font-size: 30px;
 				}
 			}
 		}
@@ -365,13 +499,14 @@ a {
 		}
 
 		.fa {
-			color: white;
+			color: black;
+			opacity: 0.5;
 			display:block;
 			margin: 30px 0;
-			@include transition($default-transition);
+			@include transition($content-transition);
 
 			&:hover {
-				color: black;
+				opacity: 1;
 			}
 		}
 	}
@@ -420,29 +555,31 @@ a {
 
 			.examples-container {
 				.example {
-					width: $content-example-size * 2;
+					.thumb {
+						width: $content-example-size * 2;
 
-					p.description {
-						top: -4 - $content-example-size;
-						left: $content-example-size;
-						// background: rgba(0,0,0,0.5);
-						background: none;
-						color: black;
-						@include transition(none);
-
-						a {
-							color: $link-dark-color;
-
-							&:hover {
-								color: $link-hover-color;
-							}
-						}
-					}
-
-					&:hover {
 						p.description {
 							top: -4 - $content-example-size;
 							left: $content-example-size;
+							// background: rgba(0,0,0,0.5);
+							background: none;
+							color: black;
+							@include transition(none);
+
+							a {
+								color: $link-color;
+
+								&:hover {
+									color: $link-hover-color;
+								}
+							}
+						}
+
+						&:hover {
+							p.description {
+								top: -4 - $content-example-size;
+								left: $content-example-size;
+							}
 						}
 					}
 				}
@@ -546,17 +683,20 @@ a {
 			.examples-container {
 
 				.example {
-					width: $content-example-size;
-					height: $content-example-size * 2;
+					.thumb {
+						width: $content-example-size;
+						height: auto;
 
-					p.description {
-						top:0;
-						left:0;
-					}
+						p.description {
+							top:0;
+							left:0;
+							height: auto;
+						}
 
-					&:hover p.description {
-						top:0;
-						left:0;
+						&:hover p.description {
+							top:0;
+							left:0;
+						}
 					}
 				}
 			}
@@ -568,3 +708,72 @@ a {
 	}
 }
 // End Mobile Site
+
+// Animations
+
+@include keyframes(ddone) {
+  0% {
+    opacity: 1;
+  }
+  24.9999999% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@include keyframes(ddtwo) {
+  0% {
+    opacity: 0;
+  }
+  24.9999999% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  49.9999999% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  74.9999999% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  99.9999999% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@include keyframes(ddthree) {
+  0% {
+    opacity: 0;
+  }
+  49.9999999% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  74.9999999% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
