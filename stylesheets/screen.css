@@ -352,8 +352,6 @@ a:hover {
 }
 /* line 369, ../sass/screen.scss */
 #content .screen .examples-container .slide {
-  -webkit-order: 100;
-  order: 100;
   width: 180px;
   margin: 30px 25px;
   border-radius: 15px;
@@ -364,11 +362,11 @@ a:hover {
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */
 }
-/* line 375, ../sass/screen.scss */
+/* line 374, ../sass/screen.scss */
 #content .screen .examples-container .slide.port {
   width: 300px;
 }
-/* line 380, ../sass/screen.scss */
+/* line 379, ../sass/screen.scss */
 #content .screen .examples-container a.logo {
   width: 30%;
   text-align: center;
@@ -377,7 +375,7 @@ a:hover {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 386, ../sass/screen.scss */
+/* line 385, ../sass/screen.scss */
 #content .screen .examples-container a.logo img.logo {
   position: relative;
   top: -50px;
@@ -391,13 +389,13 @@ a:hover {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 396, ../sass/screen.scss */
+/* line 395, ../sass/screen.scss */
 #content .screen .examples-container a.logo img.logo:hover {
   margin-top: -5%;
   width: 85%;
   height: 85%;
 }
-/* line 403, ../sass/screen.scss */
+/* line 402, ../sass/screen.scss */
 #content .screen .examples-container a.logo .animator {
   display: inline;
   position: absolute;
@@ -406,46 +404,46 @@ a:hover {
   left: 0;
   margin: 0;
 }
-/* line 417, ../sass/screen.scss */
+/* line 416, ../sass/screen.scss */
 #content .screen .examples-container a.logo .animator img.doctord {
   position: absolute;
   left: 25%;
   width: 50%;
   height: auto;
 }
-/* line 423, ../sass/screen.scss */
+/* line 422, ../sass/screen.scss */
 #content .screen .examples-container a.logo .animator img.doctord:hover {
   width: 50%;
   height: auto;
 }
-/* line 428, ../sass/screen.scss */
+/* line 427, ../sass/screen.scss */
 #content .screen .examples-container a.logo .animator img.doctord.one {
   top: -34px;
   -moz-animation: ddone 1s linear 0s infinite;
   -webkit-animation: ddone 1s linear 0s infinite;
   animation: ddone 1s linear 0s infinite;
 }
-/* line 433, ../sass/screen.scss */
+/* line 432, ../sass/screen.scss */
 #content .screen .examples-container a.logo .animator img.doctord.two {
   top: -42px;
   -moz-animation: ddtwo 1s linear 0s infinite;
   -webkit-animation: ddtwo 1s linear 0s infinite;
   animation: ddtwo 1s linear 0s infinite;
 }
-/* line 438, ../sass/screen.scss */
+/* line 437, ../sass/screen.scss */
 #content .screen .examples-container a.logo .animator img.doctord.three {
   top: -50px;
   -moz-animation: ddthree 1s linear 0s infinite;
   -webkit-animation: ddthree 1s linear 0s infinite;
   animation: ddthree 1s linear 0s infinite;
 }
-/* line 446, ../sass/screen.scss */
+/* line 445, ../sass/screen.scss */
 #content .screen .examples-container h3 {
   width: inherit;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   text-align: center;
 }
-/* line 452, ../sass/screen.scss */
+/* line 451, ../sass/screen.scss */
 #content .screen .examples-container div.link {
   height: 50px;
   margin: 15px 0;
@@ -453,7 +451,7 @@ a:hover {
   font-size: 20px;
   color: white;
 }
-/* line 459, ../sass/screen.scss */
+/* line 458, ../sass/screen.scss */
 #content .screen .examples-container div.link a {
   width: 250px;
   padding: 10px 20px;
@@ -472,16 +470,16 @@ a:hover {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 468, ../sass/screen.scss */
+/* line 467, ../sass/screen.scss */
 #content .screen .examples-container div.link a:hover {
   opacity: 1;
 }
-/* line 473, ../sass/screen.scss */
+/* line 472, ../sass/screen.scss */
 #content .screen .examples-container div.link .fa {
   font-size: 30px;
 }
 
-/* line 481, ../sass/screen.scss */
+/* line 480, ../sass/screen.scss */
 #fa-links {
   position: absolute;
   top: 50px;
@@ -489,21 +487,21 @@ a:hover {
   width: 100%;
   z-index: -1;
 }
-/* line 488, ../sass/screen.scss */
+/* line 487, ../sass/screen.scss */
 #fa-links div {
   width: 20%;
   text-align: center;
   display: block;
 }
-/* line 493, ../sass/screen.scss */
+/* line 492, ../sass/screen.scss */
 #fa-links div.fa-left {
   float: left;
 }
-/* line 497, ../sass/screen.scss */
+/* line 496, ../sass/screen.scss */
 #fa-links div.fa-right {
   float: right;
 }
-/* line 501, ../sass/screen.scss */
+/* line 500, ../sass/screen.scss */
 #fa-links div .fa {
   color: black;
   opacity: 0.5;
@@ -514,45 +512,45 @@ a:hover {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 508, ../sass/screen.scss */
+/* line 507, ../sass/screen.scss */
 #fa-links div .fa:hover {
   opacity: 1;
 }
 
 @media (max-width: 1200px) {
-  /* line 519, ../sass/screen.scss */
+  /* line 518, ../sass/screen.scss */
   #nav ul.links {
     width: 100%;
     height: 75px;
     font-size: 20px;
   }
 
-  /* line 526, ../sass/screen.scss */
+  /* line 525, ../sass/screen.scss */
   #content {
     left: 0;
     width: 80%;
   }
-  /* line 531, ../sass/screen.scss */
+  /* line 530, ../sass/screen.scss */
   #content .screen::before {
     height: 100px !important;
   }
-  /* line 535, ../sass/screen.scss */
+  /* line 534, ../sass/screen.scss */
   #content .screen h1 {
     font-size: 20pt;
   }
-  /* line 539, ../sass/screen.scss */
+  /* line 538, ../sass/screen.scss */
   #content .screen .article {
     font-size: 12pt;
   }
-  /* line 548, ../sass/screen.scss */
+  /* line 547, ../sass/screen.scss */
   #content .screen .article div.third-container div.third ul.details .info {
     line-height: 12pt;
   }
-  /* line 558, ../sass/screen.scss */
+  /* line 557, ../sass/screen.scss */
   #content .screen .examples-container .example .thumb {
     width: 500px;
   }
-  /* line 561, ../sass/screen.scss */
+  /* line 560, ../sass/screen.scss */
   #content .screen .examples-container .example .thumb p.description {
     top: -254px;
     left: 250px;
@@ -563,127 +561,127 @@ a:hover {
     -webkit-transition: none;
     transition: none;
   }
-  /* line 569, ../sass/screen.scss */
+  /* line 568, ../sass/screen.scss */
   #content .screen .examples-container .example .thumb p.description a {
     color: #3A539B;
   }
-  /* line 572, ../sass/screen.scss */
+  /* line 571, ../sass/screen.scss */
   #content .screen .examples-container .example .thumb p.description a:hover {
     color: #81CFE0;
   }
-  /* line 579, ../sass/screen.scss */
+  /* line 578, ../sass/screen.scss */
   #content .screen .examples-container .example .thumb:hover p.description {
     top: -254px;
     left: 250px;
   }
 
-  /* line 590, ../sass/screen.scss */
+  /* line 589, ../sass/screen.scss */
   #fa-links {
     top: 75px;
     width: 20%;
     left: auto;
     right: 0px;
   }
-  /* line 596, ../sass/screen.scss */
+  /* line 595, ../sass/screen.scss */
   #fa-links div {
     width: auto;
   }
-  /* line 599, ../sass/screen.scss */
+  /* line 598, ../sass/screen.scss */
   #fa-links div.fa-left {
     float: none;
   }
-  /* line 603, ../sass/screen.scss */
+  /* line 602, ../sass/screen.scss */
   #fa-links div.fa-right {
     float: none;
   }
 }
 @media (max-width: 700px) {
-  /* line 613, ../sass/screen.scss */
+  /* line 612, ../sass/screen.scss */
   .bg, .ocean-bg, #content .screen .article .home-bg {
     display: none;
   }
 
-  /* line 618, ../sass/screen.scss */
+  /* line 617, ../sass/screen.scss */
   #nav ul.links {
     height: 75px;
   }
 
-  /* line 623, ../sass/screen.scss */
+  /* line 622, ../sass/screen.scss */
   #content {
     left: 0;
     width: 100%;
   }
-  /* line 627, ../sass/screen.scss */
+  /* line 626, ../sass/screen.scss */
   #content .bg, #content .ocean-bg, #content .screen .article .home-bg {
     display: inline-block;
   }
-  /* line 631, ../sass/screen.scss */
+  /* line 630, ../sass/screen.scss */
   #content .screen {
     top: 0;
     padding: 0;
   }
-  /* line 635, ../sass/screen.scss */
+  /* line 634, ../sass/screen.scss */
   #content .screen::before {
     height: 100px !important;
   }
-  /* line 639, ../sass/screen.scss */
+  /* line 638, ../sass/screen.scss */
   #content .screen h1 {
     font-size: 16pt;
   }
-  /* line 643, ../sass/screen.scss */
+  /* line 642, ../sass/screen.scss */
   #content .screen .article + .article {
     margin-top: 30px;
   }
-  /* line 647, ../sass/screen.scss */
+  /* line 646, ../sass/screen.scss */
   #content .screen .article {
     font-size: 14pt;
     text-align: center;
   }
-  /* line 651, ../sass/screen.scss */
+  /* line 650, ../sass/screen.scss */
   #content .screen .article.splash {
     display: none;
   }
-  /* line 655, ../sass/screen.scss */
+  /* line 654, ../sass/screen.scss */
   #content .screen .article h1 {
     font-size: 16pt;
   }
-  /* line 660, ../sass/screen.scss */
+  /* line 659, ../sass/screen.scss */
   #content .screen .article div.third-container .head {
     margin-top: 0;
   }
-  /* line 664, ../sass/screen.scss */
+  /* line 663, ../sass/screen.scss */
   #content .screen .article div.third-container div.third + div.third {
     margin-top: 30px;
   }
-  /* line 668, ../sass/screen.scss */
+  /* line 667, ../sass/screen.scss */
   #content .screen .article div.third-container div.third {
     width: 96%;
     height: auto;
     left: auto;
     padding: 0 2%;
   }
-  /* line 675, ../sass/screen.scss */
+  /* line 674, ../sass/screen.scss */
   #content .screen .article div.third-container div.third ul.details .info {
     line-height: 14pt;
   }
-  /* line 686, ../sass/screen.scss */
+  /* line 685, ../sass/screen.scss */
   #content .screen .examples-container .example .thumb {
     width: 250px;
     height: auto;
   }
-  /* line 690, ../sass/screen.scss */
+  /* line 689, ../sass/screen.scss */
   #content .screen .examples-container .example .thumb p.description {
     top: 0;
     left: 0;
     height: auto;
   }
-  /* line 696, ../sass/screen.scss */
+  /* line 695, ../sass/screen.scss */
   #content .screen .examples-container .example .thumb:hover p.description {
     top: 0;
     left: 0;
   }
 
-  /* line 706, ../sass/screen.scss */
+  /* line 705, ../sass/screen.scss */
   #fa-links {
     display: none;
   }

@@ -367,7 +367,6 @@ a {
 			}
 
 			.slide {
-				@include order(100);
 				width: 180px;
 				margin: 30px 25px;
 				@include border-radius(15px);
