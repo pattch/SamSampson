@@ -126,7 +126,7 @@ a {
 	background-image: url(../images/IMG_0107.JPG);
 
 	&.blur {
-		@include filter(blur(10px));
+		// @include filter(blur(10px));
 		background-image: url(../images/IMG_0107_blur.JPG);
 	}
 }
