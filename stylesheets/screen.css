@@ -66,6 +66,8 @@ a:hover {
 }
 /* line 128, ../sass/screen.scss */
 .ocean-bg.blur {
+  -webkit-filter: none;
+  filter: none;
   background-image: url(../images/IMG_0107_blur.JPG);
 }
 
