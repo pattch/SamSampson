@@ -510,6 +510,63 @@ a {
 			    }
 			  }
 			}
+
+			.song {
+				width: 80%;
+				padding: 10px 0;
+				margin: 30px 0;
+				background-color:rgba(0,0,0,0.5);
+				color: white;
+				@include border-radius(15px);
+				@extend .flex-container;
+				@include align-items(baseline);
+				@include justify-content(center);
+
+				span {
+					display: inline-block;
+				}
+
+				.header {
+					order: -1;
+					width: 45%;
+
+					&.title {
+						font-size: 24px;
+					}
+
+					&.artist {
+						font-weight: 100;
+						text-align: right;
+					}
+				}
+
+				audio {
+					width: 90%;
+					margin: 10px 0;
+				}
+
+				.footer {
+					&.tags {
+						font-size: 12px;
+						font-weight: 100;
+						width: 60%;
+					}
+
+					&.links {
+						font-size: 30px;
+						text-align:right;
+						width: 30%;
+
+						a {
+							color: black;
+
+							&:hover {
+								color: white;
+							}
+						}
+					}
+				}
+			}
 		}
   }
 }
