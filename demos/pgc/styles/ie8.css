@@ -1,0 +1,27 @@
+/*body { Sanity Check 
+	display:none; 
+}*/
+
+.content.container .content {
+	display:inline;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/Treevid_poster.jpg', sizingMethod='scale') ;
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/Treevid_poster.jpg', sizingMethod='scale')";
+    zoom:1;
+}
+
+#about-carousel h1.label {
+	color:#282526;
+}
+
+#about-team .profile .head .info {
+	visibility: hidden;
+	background-color:#282526;
+}
+
+#about-team .profile .head .info:hover {
+	visibility: visible;
+}
+
+#curtain {
+	display: none;
+}

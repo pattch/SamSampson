@@ -1,0 +1,5 @@
+body {
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/pgctree_dk.jpg', sizingMethod='scale') ;
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/pgctree_dk.jpg', sizingMethod='scale')";
+    zoom:1;
+}
