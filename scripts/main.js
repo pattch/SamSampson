@@ -1,6 +1,7 @@
 function main() {
   mainNavigation();
   addStars();
+  animateDD();
 }
 
 function mainNavigation() {
@@ -53,6 +54,32 @@ function addStars() {
       }
     }
   }
+}
+
+function animateDD() {
+  var frames = $('.animator .doctord');
+  var anim_time = 1000 / 4;
+  frames.each(function() {
+    $(this).hide();
+  });
+
+  toggleInfinite(frames, anim_time);
+}
+
+var toggleIndex = 0;
+var toggleInc = 1;
+function toggleInfinite(els, time) {
+  els.eq(toggleIndex).toggle();
+  var prevIndex = toggleIndex;
+  toggleIndex += toggleInc;
+  if(toggleIndex >= els.length || toggleIndex < 0) {
+    toggleInc *= -1;
+    toggleIndex += 2 * toggleInc;
+  }
+  setTimeout(function() {
+    els.eq(prevIndex).toggle();
+    toggleInfinite(els, time);
+  }, time);
 }
 
 // docReady(main);
