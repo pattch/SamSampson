@@ -6,7 +6,7 @@
 @import "compass/css3";
 @import url(http://fonts.googleapis.com/css?family=Raleway:700,100,400,200);
 
-$font-raleway: 'Raleway', sans-serif;
+$font-raleway: sans-serif;
 $default-transition: background-color 0.2s, color 0.2s, top 0.2s, left 0.2s, right 0.2s, bottom 0.2s;
 $content-transition: all 0.5s ease-in-out;
 
@@ -123,11 +123,11 @@ a {
 	width:160%;
 	height:160%;
 	@extend .bg;
-	background-image: url(../images/IMG_0107.JPG);
+	background-image: url(../images/flowerbg.jpg);
 
 	&.blur {
 		@include filter(none);
-		background-image: url(../images/IMG_0107_blur.JPG);
+		background-image: url(../images/blurflowerbg.jpg);
 	}
 }
 
@@ -592,11 +592,17 @@ a {
 		}
 
 		.fa {
-			color: black;
+			color: #fff;
 			opacity: 0.5;
 			display:block;
 			margin: 30px 0;
 			@include transition($content-transition);
+
+			&::before {
+				padding: 10px;
+				border-radius: 10px;
+				background-color: rgba(0,0,0,0.7);
+			}
 
 			&:hover {
 				opacity: 1;
@@ -617,7 +623,7 @@ a {
 	}
 
 	#content {
-		left:0;
+		right:0;
 		width:80%;
 
 		.screen {
@@ -683,8 +689,8 @@ a {
 	#fa-links {
 		top: $nav-med-height;
 		width: 20%;
-		left: auto;
-		right: 0px;
+		right: auto;
+		left: 0px;
 
 		div {
 			width: auto;
