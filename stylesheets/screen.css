@@ -6,7 +6,7 @@
 /* line 88, ../sass/screen.scss */
 body {
   font-family: sans-serif;
-  background-color: #1BA39C;
+  background-color: #015778;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -19,16 +19,16 @@ body ::-webkit-scrollbar {
 }
 /* line 53, ../sass/screen.scss */
 body ::-webkit-scrollbar-thumb {
-  background: #1BA39C;
+  background: #015778;
 }
 /* line 57, ../sass/screen.scss */
 body ::-webkit-scrollbar-track {
-  background: #8dd1cd;
+  background: #80abbb;
 }
 /* line 62, ../sass/screen.scss */
 body body {
-  scrollbar-face-color: #1BA39C;
-  scrollbar-track-color: #8dd1cd;
+  scrollbar-face-color: #015778;
+  scrollbar-track-color: #80abbb;
 }
 
 /* line 98, ../sass/screen.scss */
@@ -62,18 +62,18 @@ a:hover {
   left: -30%;
   width: 160%;
   height: 160%;
-  background-image: url(../images/flowerbg.jpg);
+  background-image: url(../images/los-angeles-bg.jpg);
 }
 /* line 128, ../sass/screen.scss */
 .ocean-bg.blur {
   -webkit-filter: none;
   filter: none;
-  background-image: url(../images/blurflowerbg.jpg);
+  background-image: url(../images/los-angeles-bg-blur.jpg);
 }
 
 /* line 135, ../sass/screen.scss */
 #nav {
-  background-color: #336E7B;
+  background-color: #01a1dd;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -115,16 +115,16 @@ a:hover {
 }
 /* line 166, ../sass/screen.scss */
 #nav ul.links li:hover {
-  background-color: #A2DED0;
+  background-color: #2FB9ED;
 }
 /* line 170, ../sass/screen.scss */
 #nav ul.links li.active {
-  background-color: #22313F;
+  background-color: #015778;
   color: #fff;
 }
 /* line 174, ../sass/screen.scss */
 #nav ul.links li.active:hover {
-  background-color: #4ECDC4;
+  background-color: #08B1F2;
 }
 /* line 179, ../sass/screen.scss */
 #nav ul.links li:active {

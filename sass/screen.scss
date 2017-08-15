@@ -10,12 +10,12 @@ $font-raleway: sans-serif;
 $default-transition: background-color 0.2s, color 0.2s, top 0.2s, left 0.2s, right 0.2s, bottom 0.2s;
 $content-transition: all 0.5s ease-in-out;
 
-$nav-bg: #336E7B;
-$nav-link-hover-bg: #A2DED0;
-$nav-link-active-bg: #22313F;
+$nav-bg: #01a1dd;
+$nav-link-hover-bg: #2FB9ED;
+$nav-link-active-bg: #015778;
 $nav-active-color: #fff;
-$nav-link-alt-bg: #4ECDC4;
-$body-bg: #1BA39C;
+$nav-link-alt-bg: #08B1F2;
+$body-bg: #015778;
 $content-example-bg: rgba(0,0,0,0.7);
 $content-example-color: #fff;
 $link-dark-color: #22313F;
@@ -123,11 +123,11 @@ a {
 	width:160%;
 	height:160%;
 	@extend .bg;
-	background-image: url(../images/flowerbg.jpg);
+	background-image: url(../images/los-angeles-bg.jpg);
 
 	&.blur {
 		@include filter(none);
-		background-image: url(../images/blurflowerbg.jpg);
+		background-image: url(../images/los-angeles-bg-blur.jpg);
 	}
 }
 

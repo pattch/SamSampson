@@ -1,6 +1,6 @@
 function main() {
   mainNavigation();
-  addStars();
+  // addStars();
   animateDD();
 }
 
