@@ -270,7 +270,7 @@ a {
 					img.bio {
 						width: 100%;
 						max-width:300px;
-						@include border-radius(50%);
+						@include border-radius(15%);
 					}
 
 					ul.details {

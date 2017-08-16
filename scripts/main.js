@@ -1,7 +1,7 @@
 function main() {
   mainNavigation();
-  // addStars();
   animateDD();
+  addContent();
 }
 
 function mainNavigation() {
@@ -51,6 +51,24 @@ function toggleInfinite(els, time) {
     els.eq(prevIndex).toggle();
     toggleInfinite(els, time);
   }, time);
+}
+
+function addContent() {
+  var detail_age = $('ul.details .age');
+  detail_age.text(getAge());
+}
+
+function getAge() {
+  var bd = new Date('6/5/1992');
+  var dt = new Date();
+  var years = (dt.getFullYear() - bd.getFullYear());
+
+  bd.setFullYear(dt.getFullYear())
+  if(dt < bd) {
+    years--;
+  }
+
+  return years;
 }
 
 // docReady(main);

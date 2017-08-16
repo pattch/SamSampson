@@ -220,11 +220,11 @@ a:hover {
 #content .screen .article div.third-container div.third img.bio {
   width: 100%;
   max-width: 300px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  border-radius: 15%;
+  -webkit-border-radius: 15%;
+  -moz-border-radius: 15%;
+  -ms-border-radius: 15%;
+  -o-border-radius: 15%;
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */
 }
