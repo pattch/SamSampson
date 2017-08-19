@@ -215,6 +215,11 @@ a {
       display:block;
       height:$nav-height + 25px !important;
     }
+    
+    $spaced-amount: 40px;
+    div.spaced {
+      margin: $spaced-amount 0;
+    }
 
     h1, h2, h3, h4 {
       font-weight: 900;
@@ -240,7 +245,7 @@ a {
       font-size: 1.5em;
       color: $link-dark-color;
     }
-
+    
     h1 {
       margin: 0 0 50px 25px;
     }
@@ -272,12 +277,13 @@ a {
       }
 
       div.third-container {
+        min-height: 300px;
 
         .head {
-        display:block;
-        margin-top:30px;
-        font-size: 12pt;
-        text-align: center;
+          display:block;
+          margin-top:30px;
+          font-size: 12pt;
+          text-align: center;
         }
 
         div.third {
@@ -617,6 +623,10 @@ a {
       width:100%;
       height: $nav-med-height;
       font-size:20px;
+      
+      li {
+        border-radius: 0;
+      }
     }
   }
 
