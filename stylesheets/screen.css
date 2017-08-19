@@ -33,13 +33,13 @@ body body {
 
 /* line 98, ../sass/screen.scss */
 a {
-  color: #3A539B;
+  color: #2FB9ED;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 900;
 }
 /* line 103, ../sass/screen.scss */
 a:hover {
-  color: #81CFE0;
+  color: #fff;
 }
 
 /* line 108, ../sass/screen.scss */
@@ -297,7 +297,7 @@ a:hover {
   height: 240px;
   display: inline-block;
   position: relative;
-  top: -500px;
+  top: -525px;
   left: 0;
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -310,20 +310,20 @@ a:hover {
   margin: 0;
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+80,7db9e8+100,000000+100&amp;1+0,0.5+80,0+100 */
-  background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.5) 80%, transparent 100%);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+80,7db9e8+100,000000+100&amp;1+0,0.7+80,0.4+100 */
+  background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0.4) 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(80%, rgba(0, 0, 0, 0.5)), color-stop(100%, transparent));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(80%, rgba(0, 0, 0, 0.7)), color-stop(100%, rgba(0, 0, 0, 0.4)));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.5) 80%, transparent 100%);
+  background: -webkit-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0.4) 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.5) 80%, transparent 100%);
+  background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0.4) 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.5) 80%, transparent 100%);
+  background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0.4) 100%);
   /* IE10+ */
-  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0.4) 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000004',GradientType=0 );
   /* IE6-9 */
   -moz-transition: background-color 0.2s, color 0.2s, top 0.2s, left 0.2s, right 0.2s, bottom 0.2s;
   -o-transition: background-color 0.2s, color 0.2s, top 0.2s, left 0.2s, right 0.2s, bottom 0.2s;
@@ -670,11 +670,11 @@ a:hover {
   }
   /* line 668, ../sass/screen.scss */
   #content .screen .flex-container .example .thumb p.description a {
-    color: #3A539B;
+    color: #2FB9ED;
   }
   /* line 671, ../sass/screen.scss */
   #content .screen .flex-container .example .thumb p.description a:hover {
-    color: #81CFE0;
+    color: #fff;
   }
   /* line 678, ../sass/screen.scss */
   #content .screen .flex-container .example .thumb:hover p.description {
