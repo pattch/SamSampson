@@ -32,7 +32,7 @@ $content-padding-size: 0;
 $content-padding: 0 $content-padding-size;
 $content-font-size: 16pt;
 $content-med-font-size: 12pt;
-$content-mobi-font-size: 14pt;
+$content-mobi-font-size: 16pt;
 $content-mobi-margin-top: 30px;
 $content-example-size: 250px;
 
@@ -290,9 +290,9 @@ a {
           position:relative;
           left: -$content-padding-size;
           float:left;
-          width: 31.33333%;
+          width: 30.33333%;
           height: 300px;
-          padding:0 1%;
+          padding:0 2%;
           margin:0;
 
           ul.details {
@@ -318,13 +318,82 @@ a {
           position: relative;
           right: -$content-padding-size;
           float: right;
-          width: 62.66667%;
+          width: 60.66667%;
           height: 300 px;
-          padding: 0 1.5%;
+          padding: 0 2%;
           margin: 0;
         }
       }
 
+      $timeline-padding: 2%;
+      $timeline-width: 300px;
+      $timeline-color: #3498db;
+      $timeline-logo-width: 50px;
+      .timeline-container {
+        padding: $timeline-padding;
+        
+        .timeline-point {
+
+          .timeline-date {
+            box-sizing: border-box;
+            position: absolute;
+            font-size: 10pt;
+            width: $timeline-width;
+            text-align: right;
+            padding-top: $timeline-padding;
+            padding-right: $timeline-padding;
+
+            .logo {
+              display: inline-block;
+              margin-left: $timeline-padding;
+              width: $timeline-logo-width;
+              height: $timeline-logo-width;
+              border-radius: 50%;
+              text-align: center;
+              background-color: $timeline-color;
+
+              i.fa {
+                font-size: 30px;
+                color: #fff;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+            }
+          }
+
+          .timeline-block {
+            padding-left: $timeline-width;
+
+            .timeline-content {
+              box-sizing: border-box;
+              padding: $timeline-padding;
+              background-color:rgba(255,255,255,0.8);
+              border: 1px solid $timeline-color;
+              border-radius: 5px;
+              color: #666;
+              font-size: 10pt;
+        
+              h3, h4 {
+                font-weight: 100;
+                margin-top: 0;
+              }
+              
+              h3 {
+                font-size: 18pt;
+                color: #222;
+              }
+              
+              h4 {
+                font-size: 12pt;
+                font-weight: 100;
+                color: #999;
+              }
+            }
+          }
+        }
+      }
+      
       .home-bg {
         @extend .bg;
         position:absolute;
@@ -782,6 +851,10 @@ a {
                   line-height: $content-mobi-font-size;
               }
             }
+          }
+          
+          div.twothirds hr {
+            display:none;
           }
         }
       }
