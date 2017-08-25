@@ -718,6 +718,29 @@ a {
         div.third-container div.third ul.details .info {
                 line-height: $content-med-font-size;
         }
+        
+        $timeline-logo-width: 50px;
+        .timeline-container {
+          .timeline-point {
+            .timeline-date {
+              position: initial;
+              margin-bottom: 15px;
+              padding-right: 15px;
+              font-size: 11pt;
+              width:100%;
+              box-sizing: content-box;
+              
+              .logo {
+                float: left;
+                margin-left: 0;
+              }
+            }
+
+            .timeline-block {
+              padding-left: 0;
+            }
+          }
+        }
       }
 
       .flex-container .example  .thumb {
