@@ -4,11 +4,16 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/css3";
-@import url(http://fonts.googleapis.com/css?family=Raleway:700,100,400,200);
+//@import url(http://fonts.googleapis.com/css?family=Raleway:700,100,400,200);
+@import url('https://fonts.googleapis.com/css?family=Cardo|Montserrat:600');
 
-$font-raleway: sans-serif;
 $default-transition: background-color 0.2s, color 0.2s, top 0.2s, left 0.2s, right 0.2s, bottom 0.2s;
 $content-transition: all 0.5s ease-in-out;
+
+$lead-font: montserrat;
+$lead-weight: 600;
+$copy-font: cardo;
+$copy-weight: 400;
 
 $nav-bg: #01a1dd;
 $nav-link-hover-bg: #2FB9ED;
@@ -86,7 +91,8 @@ $content-example-size: 250px;
 }
 
 body {
-  font-family: $font-raleway;
+  font-family: $copy-font;
+  font-weight: $copy-weight;
   background-color: $body-bg;
   display:flex;
   justify-content: center;
@@ -150,6 +156,8 @@ a {
     display:table;
 
     li {
+      font-family: $lead-font;
+      font-weight: $lead-weight;
       display:table-cell;
       vertical-align: middle;
       position:relative;
@@ -221,11 +229,11 @@ a {
       margin: $spaced-amount 0;
     }
 
-    h1, h2, h3, h4 {
-      font-weight: 900;
+    h1, h2, h3, h4, h5, h6 {
+      font-family: $lead-font;
+      font-weight: $lead-weight;
 
       &.large {
-        font-family: lato, sans-serif;
         margin: 0;
         text-align: center;
       }
@@ -310,7 +318,10 @@ a {
 
         img.bio {
           width: 100%;
-          max-width:300px;
+          max-width: 300px;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
           @include border-radius(15%);
         }
 
@@ -319,9 +330,17 @@ a {
           right: -$content-padding-size;
           float: right;
           width: 60.66667%;
-          height: 300 px;
+          height: 300px;
           padding: 0 2%;
           margin: 0;
+          
+          &.about .copy-container {
+            // Not sure why this works, but it fixes positioning on Chrome
+            border: 1px solid rgba(0,0,0,0);
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+          }
         }
       }
 
@@ -453,7 +472,7 @@ a {
 
           &:hover {
             p.description {
-              top: -4 - $content-example-size;
+              top: -6 - $content-example-size;
               left: 0px;
             }
           }
@@ -470,7 +489,9 @@ a {
       p.app.description {
         // @include align-self()
         width: 100% - $logo-left - 1%;
-        min-height: 250px;
+        min-height: $content-example-size;
+        text-align: justify;
+        text-justify: inter-word;
         padding: 0 1% 0 0;
         margin: 0;
         display: inline;
@@ -590,6 +611,7 @@ a {
         margin: 30px 0;
         background-color:rgba(0,0,0,0.5);
         color: white;
+        font-family: montserrat;
         @include border-radius(15px);
         @extend .flex-container;
         @include align-items(baseline);
@@ -716,7 +738,7 @@ a {
         font-size: $content-med-font-size;
 
         div.third-container div.third ul.details .info {
-                line-height: $content-med-font-size;
+          line-height: $content-med-font-size;
         }
         
         $timeline-logo-width: 50px;
@@ -743,30 +765,43 @@ a {
         }
       }
 
-      .flex-container .example  .thumb {
-        width: $content-example-size * 2;
+      .flex-container .example {
+        width: 100%;
+        
+        .thumb {
+          width: 80%;
+          margin: 0 0 30px 10%;
 
-        p.description {
-          top: -4 - $content-example-size;
-          left: $content-example-size;
-          // background: rgba(0,0,0,0.5);
-          background: none;
-          color: black;
-          @include transition(none);
+          $description-top-position: -$content-example-size - 4px;
+          p.description {
+            box-sizing: border-box;
+            width: 100%;
+            padding-left:260px;
+            padding-right:15px;
+            float:right;
+            position:relative;
+            top: $description-top-position;
+            left:0;
+            background: none;
+            color: black;
+            text-align: justify;
+            text-justify: inter-word;
+            @include transition(none);
 
-          a {
-            color: $link-color;
+            a {
+              color: $link-color;
 
-            &:hover {
-              color: $link-hover-color;
+              &:hover {
+                color: $link-hover-color;
+              }
             }
           }
-        }
 
-        &:hover {
-          p.description {
-          top: -4 - $content-example-size;
-          left: $content-example-size;
+          &:hover {
+            p.description {
+            top: $description-top-position;
+            left: 0;
+            }
           }
         }
       }
@@ -853,6 +888,11 @@ a {
         h1 {
           font-size: 16pt;
         }
+        
+        p {
+          text-align: justify;
+          text-justify: inter-word;
+        }
 
         div.third-container {
           .head {
@@ -874,6 +914,11 @@ a {
                   line-height: $content-mobi-font-size;
               }
             }
+            
+            img.bio, &.about .copy-container {
+              top: 0;
+              transform: translateY(0);
+            }
           }
           
           div.twothirds hr {
@@ -885,21 +930,28 @@ a {
       .flex-container {
 
       .example {
-          .thumb {
-            width: $content-example-size;
+        text-align: center;
+        
+        .thumb {
+          width: 100%;
+          height: auto;
+          margin: 0 0 30px;
+
+          p.description {
+            top:0;
+            left:0;
             height: auto;
-
-            p.description {
-              top:0;
-              left:0;
-              height: auto;
-            }
-
-            &:hover p.description {
-              top:0;
-              left:0;
-            }
+            padding-left:5px;
+            padding-right:5px;
+            text-align: justify;
+            text-justify: inter-word;
           }
+
+          &:hover p.description {
+            top:0;
+            left:0;
+          }
+        }
         }
       }
     }
