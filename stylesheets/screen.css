@@ -24,12 +24,12 @@ body ::-webkit-scrollbar-thumb {
 }
 /* line 62, ../sass/screen.scss */
 body ::-webkit-scrollbar-track {
-  background: #80abbb;
+  background: #80abbc;
 }
 /* line 67, ../sass/screen.scss */
 body body {
   scrollbar-face-color: #015778;
-  scrollbar-track-color: #80abbb;
+  scrollbar-track-color: #80abbc;
 }
 
 /* line 104, ../sass/screen.scss */
@@ -185,7 +185,7 @@ a:hover {
 }
 /* line 242, ../sass/screen.scss */
 #content .screen h1.large {
-  font-size: 5em;
+  font-size: 3.5em;
 }
 /* line 246, ../sass/screen.scss */
 #content .screen h2.large, #content .screen h3.large {

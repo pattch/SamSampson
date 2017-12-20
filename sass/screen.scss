@@ -223,7 +223,7 @@ a {
       display:block;
       height:$nav-height + 25px !important;
     }
-    
+
     $spaced-amount: 40px;
     div.spaced {
       margin: $spaced-amount 0;
@@ -240,7 +240,7 @@ a {
     }
 
     h1.large {
-      font-size: 5em;
+      font-size: 3.5em;
     }
 
     h2.large, h3.large {
@@ -253,7 +253,7 @@ a {
       font-size: 1.5em;
       color: $link-dark-color;
     }
-    
+
     h1 {
       margin: 0 0 50px 25px;
     }
@@ -333,7 +333,7 @@ a {
           height: 300px;
           padding: 0 2%;
           margin: 0;
-          
+
           &.about .copy-container {
             // Not sure why this works, but it fixes positioning on Chrome
             border: 1px solid rgba(0,0,0,0);
@@ -350,7 +350,7 @@ a {
       $timeline-logo-width: 50px;
       .timeline-container {
         padding: $timeline-padding;
-        
+
         .timeline-point {
 
           .timeline-date {
@@ -392,17 +392,17 @@ a {
               border-radius: 5px;
               color: #666;
               font-size: 10pt;
-        
+
               h3, h4 {
                 font-weight: 100;
                 margin-top: 0;
               }
-              
+
               h3 {
                 font-size: 18pt;
                 color: #222;
               }
-              
+
               h4 {
                 font-size: 12pt;
                 font-weight: 100;
@@ -412,7 +412,7 @@ a {
           }
         }
       }
-      
+
       .home-bg {
         @extend .bg;
         position:absolute;
@@ -714,7 +714,7 @@ a {
       width:100%;
       height: $nav-med-height;
       font-size:20px;
-      
+
       li {
         border-radius: 0;
       }
@@ -740,7 +740,7 @@ a {
         div.third-container div.third ul.details .info {
           line-height: $content-med-font-size;
         }
-        
+
         $timeline-logo-width: 50px;
         .timeline-container {
           .timeline-point {
@@ -751,7 +751,7 @@ a {
               font-size: 11pt;
               width:100%;
               box-sizing: content-box;
-              
+
               .logo {
                 float: left;
                 margin-left: 0;
@@ -767,7 +767,7 @@ a {
 
       .flex-container .example {
         width: 100%;
-        
+
         .thumb {
           width: 80%;
           margin: 0 0 30px 10%;
@@ -888,7 +888,7 @@ a {
         h1 {
           font-size: 16pt;
         }
-        
+
         p {
           text-align: justify;
           text-justify: inter-word;
@@ -914,13 +914,13 @@ a {
                   line-height: $content-mobi-font-size;
               }
             }
-            
+
             img.bio, &.about .copy-container {
               top: 0;
               transform: translateY(0);
             }
           }
-          
+
           div.twothirds hr {
             display:none;
           }
@@ -931,7 +931,7 @@ a {
 
       .example {
         text-align: center;
-        
+
         .thumb {
           width: 100%;
           height: auto;
